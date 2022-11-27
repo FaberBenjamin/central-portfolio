@@ -1,0 +1,210 @@
+body {
+    overflow-x: hidden;
+}
+
+.page_wrapper {
+    position: relative;
+    min-height: 100vh;
+    overflow:auto;
+    width: 100vw;
+    display: flex;
+    background:rgb(77, 74, 75);
+    animation: AnimatedBackground 60s ease infinite, arriving 0.5s ease;
+    }
+    
+    @keyframes AnimatedBackground {
+        0%{background-color: rgb(77, 74, 75)}
+        25%{background-color:rgb(39, 39, 39)}
+        50%{background-color:rgb(0, 7, 10)}
+        75%{background-color:rgb(39, 39, 39)}
+        100%{background-color: rgb(77, 74, 75)}
+        }
+
+    @keyframes arriving {
+        from {
+            opacity: 0.8;
+        } to {
+            opacity: 1;
+        }
+    }
+
+    .content_container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        z-index: 2;
+        margin-bottom: 20px;
+    }
+    
+    .description {
+        color: rgb(255, 255, 255);
+        border: 1px solid;
+        border-radius: 10px;
+        padding: 5px;
+        border-color: white;
+        margin-top: 150px;
+        margin-right: auto;
+        margin-left: auto;
+        margin-bottom: auto;
+        width: 40%;
+        text-align: center;
+    }
+    
+    .description>p {
+        font-size: 16px;
+    }
+    
+    .description>h3 {
+        font-weight: 600;
+        font-size: 25px;
+    }
+    
+    .progressbar_container {
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+    
+    .progressbar_container>img {
+        width: 40px;
+        height: 40px;
+        padding-right: 15px;
+    }
+    
+    .progressbar_container>h3 {
+        padding-right: 15px;
+    }
+    
+    .progressbars_container {
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .progressbar_wrapper {
+        width: 200px;
+        padding-right: 15px;
+    }
+    
+    .progressbar {
+        border: 1px solid;
+        border-color: white;
+        border-radius: 10px;
+    }
+    
+    .progressbar_fill {
+        display: block;
+        width: 80%;
+        background-color: white;
+        height: 20px;
+        border-radius: 10px;
+    }
+
+    .HTML {
+        animation: fill80 2s forwards;
+    }
+    
+    .CSS {
+        animation: fill90 2s forwards;
+    }
+    
+    .JS {
+        animation: fill 2s forwards;
+    }
+    
+    .React {
+        animation: fill 2s forwards;
+    }
+    
+    .API {
+        animation: fill60 2s forwards;
+    }
+    
+    .Bootstrap {
+        animation: fill 2s forwards;
+    }
+    
+    .SVG {
+        animation: fill 2s forwards;
+    }
+    
+    .course_container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .course_container>img {
+        width: 50px;
+        height: 50px;
+        padding-right: 10px;
+    }
+    
+    @keyframes fill {
+        from {
+            width: 5%;
+        } to {
+            width: 70%;
+        }
+    }
+
+    @keyframes fill60 {
+        from {
+            width: 5%;
+        } to {
+            width: 60%;
+        }
+    }
+
+    
+    @keyframes fill90 {
+        from {
+            width: 5%;
+        } to {
+            width: 90%;
+        }
+    }
+
+    @keyframes fill80 {
+        from {
+            width: 5%;
+        } to {
+            width: 80%;
+        }
+    }
+
+    @media all and (max-width: 992px) {
+        .content_container {
+            display: flex;
+            flex-direction: column;
+        }
+        .progressbars_container {
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+        }
+        .description {
+            width: 80%;
+        }
+    }
+    
+    @media all and (max-width: 600px) {
+        .content_container {
+            display: flex;
+            flex-direction: column;
+        }
+        .progressbars_container {
+            width: 80%;
+            margin: auto;
+            padding-top: 50px;
+        }
+
+        .description {
+            width: 80%;
+        }
+        .progressbar_wrapper {
+            width: 100px;
+        }
+    }

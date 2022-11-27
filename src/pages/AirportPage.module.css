@@ -1,0 +1,124 @@
+.page_wrapper {
+    position: relative;
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    background: #28a1e7;
+    animation: arriving 0.5s ease, AnimatedBackground 60s ease infinite;
+}
+
+@keyframes AnimatedBackground {
+    0%{background-color: #28a1e7}
+    50%{background-color:#141cab}
+    100%{background-color: #28a1e7}
+    }
+
+@keyframes arriving {
+    from {
+        opacity: 0.8;
+    } to {
+        opacity: 1;
+    }
+}
+
+.content_container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    z-index: 2;
+    margin-top: 120px;
+    margin-bottom: 25px;
+}
+
+.description {
+    background-color: white;
+    opacity: 0.7;
+    border: 1px solid;
+    border-radius: 10px;
+    padding: 5px;
+    border-color: white;
+    margin: auto;
+    width: 60%;
+    text-align: center;
+}
+
+.description>h3 {
+    font-weight: 600;
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+}
+
+
+.background_img {
+    position: relative;
+}
+
+.background_img>.plain {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    right: 100%;
+    z-index: 1;
+    filter: blur(2px);
+    animation: Sliding_img ease 120s;
+}
+
+.background_img>.cloud_1 {
+    position: absolute;
+    width: 500px;
+    top: 20%;
+    left: 100%;
+    z-index: 1;
+    
+    animation: Sliding_cloud_2 ease 600s infinite;
+}
+
+.background_img>.cloud_2 {
+    position: absolute;
+    width: 500px;
+    top: 50%;
+    right: 100%;
+    z-index: 1;
+    filter: blur(2px);
+    animation: Sliding_cloud ease 600s infinite;
+}
+
+
+@keyframes Sliding_img {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(1550px) translateY(-1000px);
+    }
+}
+
+@keyframes Sliding_cloud {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(3000px) translateY(0);
+    }
+}
+
+@keyframes Sliding_cloud_2 {
+    0% {
+      transform: translateX(0) translateY(0);
+    }
+    100% {
+        transform: translateX(-3000px) translateY(0);
+    }
+}
+
+@media all and (max-width: 992px) {
+    .description {
+       width: 80%;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .description {
+        width: 80%;
+    }
+}

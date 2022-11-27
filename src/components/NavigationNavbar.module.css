@@ -1,0 +1,140 @@
+html {
+    overflow-x: hidden;
+}
+
+.navbar_body {
+    position: fixed;
+    top: 0;
+    display: flex;
+    width: 100%;
+    max-height: 100px;
+    background-color: white;
+    box-shadow: 5px 10px rgba(245, 245, 245, 0.801);
+    justify-content: space-between;
+    align-items: center;
+    z-index: 5;
+}
+
+.navbar_text {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 50px;
+    letter-spacing: 3px;
+    margin-left: 50px;
+}
+
+.subtitles {
+    display: flex;
+}
+
+.subtitles>div {
+    margin-right: 20px;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.jobs_container_fix {
+    z-index: 3;
+    position: relative;
+}
+
+.jobs_container {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    width: max-content;
+    position: absolute;
+    top: 70%;
+    left: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.jobs_container>h3 {
+    font-weight: 100;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.menu_hidden {
+    display: none;
+}
+
+.menu_visible {
+    display: flex;
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover {
+    text-decoration: underline 3px;
+}
+
+.navbar_active {
+    display: flex;
+    flex-direction: column;
+}
+
+.hamburger {
+    position: absolute;
+    right: 2%;
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger>img {
+   width: 50px;
+   height: 50px;
+}
+
+
+@media all and (max-width: 992px) {
+    .subtitles {
+        display: none;
+    }
+    .hamburger {
+        display: inline;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+    .navbar_active {
+        display: flex;
+        flex-direction: column;
+        max-height: 10000px;
+        transition: 2s; 
+    }
+    .navbar_text {
+        margin-left: auto;
+        margin-right: auto;
+        font-size: 35px;
+    }
+    .jobs_container {
+        position: relative;
+    }
+}
+
+@media all and (min-width: 993px) {
+    .subtitles {
+        display: flex;
+    }
+    .hamburger {
+        display: none;
+    }
+    .navbar_active {
+        display: flex;
+        flex-direction: row;
+    }
+    .navbar_text {
+        margin-left: 50px;
+        font-size: 50px;
+    }
+    .jobs_container {
+        position: absolute;
+    }
+}

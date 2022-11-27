@@ -1,0 +1,79 @@
+.text_container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    color: white;
+    letter-spacing: 1px;
+}
+
+.text_container>div>img {
+    width: 50px;
+    height: 50px;
+    padding-right: 20px;
+}
+
+.text_container>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page_wrapper {
+position: relative;
+min-height: 100vh;
+width: 100vw;
+display: flex;
+background:rgb(77, 74, 75);
+animation: AnimatedBackground 60s ease infinite, arriving 0.5s ease;
+}
+
+@keyframes AnimatedBackground {
+    0%{background-color: rgb(77, 74, 75)}
+    25%{background-color:rgb(39, 39, 39)}
+    50%{background-color:rgb(0, 7, 10)}
+    75%{background-color:rgb(39, 39, 39)}
+    100%{background-color: rgb(77, 74, 75)}
+    }
+
+@keyframes arriving {
+    from {
+        opacity: 0.8;
+    } to {
+        opacity: 1;
+    }
+}
+
+@media all and (max-width: 992px) {
+    .text_container>div {
+        display: flex;
+        flex-direction: column;
+    }
+    .text_container>div>h1 {
+        text-align: center;
+        padding: 20px;
+        font-size: 100%;
+       
+    }
+    .text_container>h2 {
+        margin-top: 180px;
+        text-align: center;
+        padding: 20px;
+    }
+}
+
+@media all and (max-width: 600px) {
+    .text_container>div {
+        display: flex;
+        flex-direction: column;
+    }
+    .text_container>div>h1 {
+        text-align: center;
+        padding: 20px;
+        font-size: 100%;
+    }
+    .text_container>h2 {
+        margin-top: 180px;
+        text-align: center;
+        padding: 20px;
+    }
+}
