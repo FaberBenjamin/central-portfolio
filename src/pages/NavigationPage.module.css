@@ -6,6 +6,11 @@
     letter-spacing: 1px;
 }
 
+.button_container>h1 {
+    text-align: center;
+    padding: 10px;
+}
+
 .page_wrapper {
 position: relative;
 min-height: 100vh;
